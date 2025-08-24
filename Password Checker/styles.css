@@ -1,0 +1,141 @@
+body {
+    background: #111426;
+    color: #ebeef5;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 490px;
+    margin: 40px auto;
+    background: #191c32;
+    padding: 36px 32px 30px 32px;
+    border-radius: 18px;
+    box-shadow: 0 2px 34px #0003;
+    position: relative;
+}
+
+h2 {
+    margin-top: 0;
+    margin-bottom: 26px;
+    font-weight: 700;
+    font-size: 1.45rem;
+    letter-spacing: 0.01em;
+    text-align: left;
+    color: #fff;
+}
+
+input[type="password"] {
+    width: 100%;
+    padding: 14px 13px;
+    border: none;
+    border-radius: 7px;
+    margin-bottom: 20px;
+    font-size: 1.08rem;
+    background: #16192a;
+    color: #ebeef5;
+    outline: none;
+    box-shadow: 0 0 0 1.5px #232741;
+    transition: box-shadow 0.22s;
+}
+
+input[type="password"]:focus {
+    box-shadow: 0 0 0 2px #52e2b9;
+}
+
+#strength-bar {
+    width: 100%;
+    height: 9px;
+    background: #181a2a;
+    border-radius: 9px;
+    margin-bottom: 26px;
+    overflow: hidden;
+    position: relative;
+}
+
+#strength-bar .bar-fill {
+    height: 100%;
+    width: 0;
+    background: linear-gradient(90deg, #ff4545, #ffa600, #ffff3b, #52e2b9, #33ff99);
+    border-radius: 9px;
+    transition: width 0.4s cubic-bezier(.4,2,.6,1), background 0.4s;
+}
+
+ul#requirements {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 16px 0;
+}
+
+ul#requirements li {
+    font-size: 1.04rem;
+    margin-bottom: 5px;
+    padding-left: 26px;
+    position: relative;
+    line-height: 1.7;
+    transition: color 0.2s;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    letter-spacing: 0.01em;
+}
+
+ul#requirements li.invalid {
+    color: #ff506f;
+}
+
+ul#requirements li.valid {
+    color: #33ff99;
+}
+
+ul#requirements li::before {
+    content: "✗";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #ff506f;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.2s;
+}
+
+ul#requirements li.valid::before {
+    content: "✓";
+    color: #33ff99;
+}
+
+ul#requirements li:last-child {
+    margin-bottom: 1px;
+}
+
+#feedback {
+    margin-top: 12px;
+    min-height: 22px;
+    font-size: 1.09rem;
+    text-align: left;
+    color: #fff;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    padding-left: 2px;
+    opacity: 0.88;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px 8px 18px 8px;
+        max-width: 96vw;
+    }
+    h2 {
+        font-size: 1.19rem;
+    }
+    input[type="password"] {
+        font-size: 1rem;
+    }
+    ul#requirements li {
+        font-size: 0.98rem;
+    }
+    #feedback {
+        font-size: 1rem;
+    }
+}

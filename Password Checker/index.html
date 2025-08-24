@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Advanced Password Strength Checker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Advanced Password Strength Checker</h2>
+        <input type="password" id="password" placeholder="Enter your password" autocomplete="off" />
+        <div id="strength-bar"><div class="bar-fill"></div></div>
+        <ul id="requirements">
+            <li id="len" class="invalid">At least 12 characters</li>
+            <li id="upper" class="invalid">Contains uppercase letter</li>
+            <li id="lower" class="invalid">Contains lowercase letter</li>
+            <li id="number" class="invalid">Contains number</li>
+            <li id="symbol" class="invalid">Contains symbol</li>
+            <li id="unique" class="invalid">Has unique characters</li>
+            <li id="entropy" class="invalid">High entropy</li>
+            <li id="pwned" class="invalid">Not found in data breaches</li>
+        </ul>
+        <div id="feedback"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
